@@ -1,0 +1,41 @@
+.navbar{
+    background-color: rgb(231, 241, 245);
+}
+.aman{
+    
+    margin-left: 890px;
+    
+}
+.navbar-brand{
+    margin-left: 20px;
+    font-family: 'Russo One',sans-serif;
+    font-size: 40px;
+	background: linear-gradient(to right, #F00, #00F);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: gradient 1s linear infinite;
+	animation: gradient 1s linear infinite;
+	
+}
+
+.nav-link{
+    margin-left: 60px;
+    font-family: 'Monsorrate';
+    font-weight: 600;
+    font-size: large;
+    color: black;
+}
+.welcome{
+	font-family: 'Monsorrate';
+	margin-left:80px;
+	font-weight: bold;
+	font-size: 30px;
+	background: -webkit-linear-gradient(rgb(255, 0, 21), rgb(174, 0, 255));
+    -webkit-background-clip: text;
+    background-clip: text; /* Add this line */
+    -webkit-text-fill-color: transparent;
+}
+.new{
+	color: rgb(86, 152, 134);
+}

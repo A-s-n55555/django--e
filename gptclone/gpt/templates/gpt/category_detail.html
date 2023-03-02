@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ category.name }}</h1>
+  <p>{{ category.description }}</p>
+  <h2>Products:</h2>
+  <ul>
+    {% for product in products %}
+      <li><a href="{% url 'gpt:product_detail' product.pk %}">{{ product.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

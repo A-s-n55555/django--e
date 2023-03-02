@@ -1,0 +1,20 @@
+<!-- gpt/templates/gpt/index.html -->
+
+{% extends 'gpt/base.html' %}
+
+{% block content %}
+  <h2>Products</h2>
+
+  <ul>
+    {% for product in products %}
+      <li>
+        {{ product.name }} - {{ product.price }}
+        <form action="{% url 'gpt:cart' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="product_id" value="{{ product.id }}">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,65 @@
+/* Style for the login and signup containers */
+body{
+  background-color: #333;
+}
+#login-container, #signup-container {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Style for the login and signup forms */
+  form {
+    width: 100%;
+  }
+  
+  /* Style for the input fields */
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  /* Style for the submit button */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the buttons */
+  button {
+    background-color: #008CBA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  button:hover {
+    background-color: #007EA7;
+  }
+  
+  /* Style for the form headings */
+  h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  

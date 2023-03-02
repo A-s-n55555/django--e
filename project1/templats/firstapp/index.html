@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{%load static%}
+{% comment %} {% {% load staticfiles %}%} {% endcomment %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DJANGO level 2</title>
+        <link rel="stylesheet" herf = "{%static 'css/mycss1.css'}"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/mycss1.css' %}" />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1> hello welcome to 2<h1>
+        <img src =' {% static "images\497292.jpg" %}' alt="oh hi no"/>
+        <div class ="djangotwo">
+            {% if access_record %}
+            <table>
+                <thead>
+                    <th>site name </th>
+                    <th>date accessed</th>
+                </thead>
+                
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{acc.name}}</td>
+                    <td>{{acc.date}}</td>
+                </tr>
+                {% endfor %}
+                
+            </table>
+            {% else %}
+                <p>no access found</p>
+            {% endif %} 
+
+        </div>
+             
+        {% comment %} <script src="" async defer></script> {% endcomment %}
+    </body>
+</html>

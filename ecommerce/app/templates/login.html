@@ -1,0 +1,149 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="../static/css/login.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <script src="../static/js/login.js"></script>
+   
+</head>
+<style>
+  /* Style for the login and signup containers */
+body{
+  background-color: #9d9494;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#login-container, #signup-container {
+    width: 400px;
+    /* margin: 0 auto; */
+    margin-top: 130px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Style for the login and signup forms */
+  form {
+    width: 100%;
+  }
+  
+  /* Style for the input fields */
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  /* Style for the submit button */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the buttons */
+  button {
+    background-color: #008CBA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  button:hover {
+    background-color: #007EA7;
+  }
+  
+  /* Style for the form headings */
+  h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+</style>
+
+<body>
+
+    <div id="login-container">
+        <form id="login-form">
+          <h2>Login</h2>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <input type="submit" value="Login">
+        </form>
+        <button id="signup-button">Signup</button>
+      </div>
+      
+      <div id="signup-container" style="display:none">
+        <form id="signup-form">
+          <h2>Signup</h2>
+          <label for="new-username">Username:</label>
+          <input type="text" id="new-username" name="new-username">
+          <label for="new-password">Password:</label>
+          <input type="password" id="new-password" name="new-password">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+          <input type="submit" value="Signup">
+        </form>
+        <button id="back-button">Back to Login</button>
+      </div>
+      
+
+      <script>
+        // Get the form elements
+var loginContainer = document.getElementById("login-container");
+var signupContainer = document.getElementById("signup-container");
+var signupButton = document.getElementById("signup-button");
+var backButton = document.getElementById("back-button");
+
+// Add event listener for signup button click
+signupButton.addEventListener("click", showSignupForm);
+
+// Add event listener for back button click
+backButton.addEventListener("click", showLoginForm);
+
+// Function to show the signup form
+function showSignupForm() {
+  // Hide the login form
+  loginContainer.style.display = "none";
+  
+  // Show the signup form
+  signupContainer.style.display = "block";
+}
+
+function showLoginForm() {
+  // Hide the signup form
+  signupContainer.style.display = "none";
+  
+  // Show the login form
+  loginContainer.style.display = "block";
+}
+// Function to show the login form
+
+      </script>
+</body>
+</html>
